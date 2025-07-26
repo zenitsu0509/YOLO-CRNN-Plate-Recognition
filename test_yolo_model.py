@@ -165,18 +165,18 @@ class NumberPlateDetector:
 #         print("Error: Please specify either --image or --folder")
 
 # Example usage functions
-# def test_single_image():
-#     """Example function to test a single image"""
-#     model_path = "models/yolov8_1e.pt"  # Update this path
-#     image_path = "images/image1.jpg"    # Update this path
+def test_single_image():
+    """Example function to test a single image"""
+    model_path = "models/yolov8_3e.pt"  # Update this path
+    image_path = "images/image3.jpg"    # Update this path
     
-#     detector = NumberPlateDetector(model_path, confidence_threshold=0.5)
-#     detections, annotated_image = detector.detect_plate(image_path, save_results=True)
+    detector = NumberPlateDetector(model_path, confidence_threshold=0.5)
+    detections, annotated_image = detector.detect_plate(image_path, save_results=True)
     
-#     # Optionally display the image
-#     cv2.imshow('Number Plate Detection', annotated_image)
-#     cv2.waitKey(0)
-#     cv2.destroyAllWindows()
+    # Optionally display the image
+    cv2.imshow('Number Plate Detection', annotated_image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 def test_webcam():
     """Example function to test with webcam (real-time detection)"""
@@ -208,4 +208,4 @@ def test_webcam():
         os.remove("temp_frame.jpg")
 
 if __name__ == "__main__":
-    test_webcam()
+    test_single_image()
