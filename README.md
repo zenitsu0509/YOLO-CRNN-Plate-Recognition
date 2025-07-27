@@ -103,6 +103,21 @@ The notebooks in the `notebook/` directory provide a step-by-step guide to train
 -   The notebook will handle data loading, training, and saving the best model.
 -   Replace `best_ocr_model.pth` with your newly trained model.
 
+## Dataset
+
+The models included in this repository were trained on the **CCPD (Chinese City Parking Dataset)**, a large and comprehensive dataset containing over 100,000 images.
+
+The raw and processed datasets used for training are available on Hugging Face:
+
+-   **Full 100k CCPD Dataset**: [zenitsu09/ccpd-100k-yolo](https://huggingface.co/datasets/zenitsu09/ccpd-100k-yolo)
+    -   This is the main dataset containing the original 100,000 images.
+
+-   **YOLO Detection Dataset**: [zenitsu09/ccpd-yolo-detection](https://huggingface.co/datasets/zenitsu09/ccpd-yolo-detection)
+    -   This dataset was derived from the full set and is formatted specifically for training the YOLOv8 detection model.
+
+-   **OCR Recognition Dataset**: [zenitsu09/ccpd-ocr-recognition](https://huggingface.co/datasets/zenitsu09/ccpd-ocr-recognition)
+    -   This dataset contains cropped number plate images and their corresponding text labels, created from the full set for training the CRNN OCR model.
+
 ## Acknowledgements
 
 - This project uses the powerful [YOLOv8](https://github.com/ultralytics/ultralytics) object detection model.
