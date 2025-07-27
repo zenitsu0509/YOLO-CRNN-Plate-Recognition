@@ -173,6 +173,6 @@ if __name__ == '__main__':
     # --- Configuration ---
     YOLO_MODEL_PATH = 'models/yolov8_3e.pt'
     OCR_MODEL_PATH = 'models/best_ocr_model.pth'
-    IMAGE_TO_PROCESS = 'images/image3.jpg'
+    IMAGE_TO_PROCESS = 'images/image.png'
 
     main(YOLO_MODEL_PATH, OCR_MODEL_PATH, IMAGE_TO_PROCESS)
