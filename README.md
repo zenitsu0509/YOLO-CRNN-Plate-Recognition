@@ -15,7 +15,7 @@ This project implements a complete pipeline for automatic number plate recogniti
 ```
 .
 ├── models/
-│   ├── yolov8_1e.pt            # Trained YOLOv8 model
+│   ├── yolov8_3e.pt            # Trained YOLOv8 model
 │   └── best_ocr_model.pth      # Trained CRNN OCR model
 ├── images/
 │   └── ...                     # Sample images for testing
@@ -43,8 +43,8 @@ This project implements a complete pipeline for automatic number plate recogniti
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-folder>
+    git clone git@github.com:zenitsu0509/YOLO-CRNN-Plate-Recognition.git
+    cd YOLO-CRNN-Plate-Recognition
     ```
 
 2.  **Create a virtual environment (recommended):**
@@ -54,14 +54,9 @@ This project implements a complete pipeline for automatic number plate recogniti
     ```
 
 3.  **Install the required dependencies:**
-    It's recommended to install PyTorch first, following the official instructions for your specific hardware (CPU or GPU).
     ```bash
-    # Install PyTorch (visit https://pytorch.org/ for the correct command)
-    # Example for CUDA 11.8:
-    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-    # Install other dependencies
-    pip install ultralytics opencv-python gradio numpy
+    # Install dependencies
+    pip install -r requirements.txt
     ```
 
 ## How to Use
