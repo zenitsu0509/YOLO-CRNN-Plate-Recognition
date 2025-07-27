@@ -114,10 +114,10 @@ def predict_image(image_path, model_path):
 if __name__ == '__main__':
     # --- Configuration ---
     # Make sure this path is correct
-    MODEL_PATH = 'models/best_ocr_model_ctc.pth' 
+    MODEL_PATH = 'models/best_ocr_model.pth' 
     
 
-    IMAGE_PATH = "images/plate1.jpg"
+    IMAGE_PATH = "images/image2.jpg"
     predicted_plate = predict_image(IMAGE_PATH, MODEL_PATH)
 
     print("-" * 30)
