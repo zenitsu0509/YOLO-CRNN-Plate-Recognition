@@ -208,4 +208,4 @@ def test_webcam():
         os.remove("temp_frame.jpg")
 
 if __name__ == "__main__":
-    test_single_image()
+    test_webcam()
