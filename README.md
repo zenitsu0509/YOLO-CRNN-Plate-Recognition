@@ -81,6 +81,36 @@ python number_plate_recognition_pipeline.py
 
 You can change the image being processed by editing the `IMAGE_TO_PROCESS` variable inside the script.
 
+## Evaluation
+### CCPD PIPELINE EVALUATION RESULTS
+============================================================
+
+📊 DETECTION PERFORMANCE:
+   Total Images: 2000
+   Detected: 1922
+   Not Detected: 0
+   Detection Rate: 1.000
+
+🔤 OCR PERFORMANCE:
+   Total Predictions: 1922
+   Character Accuracy: 0.991
+   Sequence Accuracy: 0.952
+
+⏱️  TIMING PERFORMANCE:
+   Avg Detection Time: 0.101s
+   Avg OCR Time: 0.029s
+   Avg Total Time: 0.130s
+
+📝 SAMPLE RESULTS:
+   1. GT: 'AN6085' | Pred: 'AN6085' | Char Acc: 1.000
+   2. GT: 'D15M48' | Pred: 'D15M48' | Char Acc: 1.000
+   3. GT: 'ANR010' | Pred: 'ANR010' | Char Acc: 1.000
+   4. GT: 'AX407G' | Pred: 'AX407G' | Char Acc: 1.000
+   5. GT: 'AAW909' | Pred: 'AAW909' | Char Acc: 1.000
+
+============================================================
+📄 Detailed results saved to: ccpd_evaluation_results.json
+
 ## Training Your Own Models
 
 The notebooks in the `notebook/` directory provide a step-by-step guide to training your own models.
