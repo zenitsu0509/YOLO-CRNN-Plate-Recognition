@@ -2,6 +2,21 @@
 
 This project implements a complete pipeline for automatic number plate recognition (ANPR) from images. It uses a YOLOv8 model for detecting number plates and a custom-trained CRNN (Convolutional Recurrent Neural Network) model for recognizing the characters on the detected plates. The entire pipeline is made accessible through a user-friendly Gradio web interface.
 
+## Demo
+
+Here is an example of the pipeline processing an image:
+
+<table>
+  <tr>
+    <td align="center"><b>Unprocessed Image</b></td>
+    <td align="center"><b>Processed Image with Recognized Plate</b></td>
+  </tr>
+  <tr>
+    <td><img src="images/image1.jpg" alt="Unprocessed Image" width="400"/></td>
+    <td><img src="images/image.webp" alt="Processed Image" width="400"/></td>
+  </tr>
+</table>
+
 ## Features
 
 - **YOLOv8 for Detection**: Utilizes a fine-tuned YOLOv8 model for robust and accurate number plate detection.
@@ -14,21 +29,22 @@ This project implements a complete pipeline for automatic number plate recogniti
 
 ```
 .
-├── models/
-│   ├── yolov8_3e.pt            # Trained YOLOv8 model
-│   └── best_ocr_model.pth      # Trained CRNN OCR model
-├── images/
-│   └── ...                     # Sample images for testing
-├── results/
-│   └── ...                     # Output images from the pipeline
-├── notebook/
-│   ├── train_yolov8_model.ipynb # Notebook for training the detector
-│   └── train_ocr_model.ipynb    # Notebook for training the OCR model
-├── ocr_model_test.py           # Script to test the OCR model
-├── test_yolo_model.py          # Script to test the YOLO model
-├── number_plate_recognition_pipeline.py # Main script for the end-to-end pipeline
-├── gradio_app.py               # Gradio web interface
-└── README.md                   # This file
+├── images/                   # Sample images for testing
+├── models/                   # Trained model files
+│   ├── yolov8_8e.pt          # Trained YOLOv8 model
+│   └── best_ocr_model_50.pth # Trained CRNN OCR model
+├── notebook/                 # Jupyter notebooks for training
+│   ├── train_yolov8_model.ipynb
+│   └── train_ocr_model.ipynb
+├── scripts/                  # Utility scripts
+│   ├── number_plate_recognition_pipeline.py # Main script for the end-to-end pipeline
+│   ├── ocr_model_test.py         # Script to test the OCR model
+│   ├── test_yolo_model.py        # Script to test the YOLO model
+│   └── test_models.py            # Script to test both models
+├── ccpd_evaluation_results.json # Detailed evaluation results
+├── gradio_app.py             # Gradio web interface
+├── requirements.txt          # Project dependencies
+└── README.md                 # This file
 ```
 
 ## Getting Started
